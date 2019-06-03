@@ -1,0 +1,13 @@
+{
+  "name": {
+    "type": "string"
+  },
+  "dueDate": {
+    "type": "date"
+  },
+  "priority": {
+    "type": "string",
+    "maximum": 1,
+    "minimum": 1
+  }
+}

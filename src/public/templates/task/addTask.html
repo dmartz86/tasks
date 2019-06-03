@@ -1,0 +1,45 @@
+<h1 class="center">
+  <span ng-if="!form.task.id">Task Editor</span>
+  <span ng-if="form.task.id">Editing task {{form.task.id}}</span>
+</h1>
+<md-content>
+  <form name="taskForm" ng-submit="form.submit(form.task)">
+    <div layout="row">
+      <md-input-container flex="100">
+        <label>Task name</label>
+        <input required name="name" ng-model="form.task.name" value="Task name">
+        <div ng-messages="taskForm.name.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+    </div>
+    <div layout="row">
+      <md-input-container flex="100">
+        <label>Priority</label>
+        <md-select name="type" ng-model="form.task.priority" required>
+          <md-option value="1">Too Low</md-option>
+          <md-option value="2">Low</md-option>
+          <md-option value="3">Medium</md-option>
+          <md-option value="4">Hight</md-option>
+          <md-option value="5">Too Hight</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+    <div layout="row">
+      <md-input-container flex="100">
+        <label>Due date</label>
+        <md-datepicker required name="dueDate" ng-model="form.task.dueDate"></md-datepicker>
+        <div ng-messages="taskForm.dueDate.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+    </div>
+    <div ng-if="!form.task.id">
+      <md-button class="md-raised md-primary" type="submit">Add task</md-button>
+    </div>
+    <div ng-if="form.task.id">
+      <md-button class="md-raised md-primary" type="submit">Cancel</md-button>
+      <md-button class="md-raised md-warn" type="submit">Update task</md-button>
+    </div>
+  </form>
+</md-content>

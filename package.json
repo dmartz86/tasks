@@ -1,0 +1,20 @@
+{
+  "name": "tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Daniel Martinez",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.5.1",
+    "body-parser": "^1.18.3",
+    "eslint": "^5.16.0",
+    "express": "^4.16.3"
+  }
+}

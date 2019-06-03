@@ -1,0 +1,27 @@
+<h1 class="center">Task List</h1>
+<md-content>
+  <md-list>
+    <md-list-item ng-repeat="task in form.tasks">
+      <md-card class="full">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">
+              {{task.name}} <strong>for</strong> {{task.dueDate | date}}
+            </span>
+            <span class="md-subhead">
+              <strong>Priority</strong>: {{task.priority | priority}},
+              <strong>Created at</strong>: {{task.createdAt | date}},
+              <strong>Updated at</strong> {{task.updatedAt | date}}
+            </span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button disabled="true">Sequence: {{task.id}}</md-button>
+          <md-button class="md-raised md-warn" ng-click="form.destroy(task.id)">Remove</md-button>
+          <md-button class="md-raised md-primary" ng-click="form.edit(task)">Edit</md-button>
+        </md-card-actions>
+      </md-card>
+    </md-list-item>
+  </md-list>
+  <h3 ng-if="!form.tasks.length" class="center">No data</h3>
+</md-content>

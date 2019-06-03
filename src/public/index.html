@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tasks Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.19/angular-material.min.css" />
+</head>
+
+<body>
+  <article>
+    <section>
+      <div ng-app="Task" layout="column" ng-cloak max-width="600px">
+        <div layout="row">
+          <div flex="10"></div>
+          <div flex="80">
+            <md-toolbar class="md-hue-1">
+              <div layout="row">
+                <h2 class="md-toolbar-tools">
+                  <span>Tasks Platform</span>
+                </h2>
+              </div>
+            </md-toolbar>
+            <div layout="row">
+              <div flex="50">
+                <task-creator></task-creator>
+              </div>
+              <div flex="50">
+                <task-list></task-list>
+              </div>
+            </div>
+          </div>
+          <div flex="10"></div>
+        </div>
+      </div>
+    </section>
+  </article>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.19/angular-material.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
